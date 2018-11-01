@@ -11,9 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { reducer } from '../states/building/building.reducer';
 import { EffectsModule } from '@ngrx/effects';
-import { BuildingEffects } from '../states/building/building.effects';
 
 @NgModule({
   declarations: [
@@ -25,15 +23,11 @@ import { BuildingEffects } from '../states/building/building.effects';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     StoreModule.forRoot({}),
-    StoreModule.forFeature('buildings', reducer),
     StoreDevtoolsModule.instrument({
       name: "Demo Ngrx5",
       maxAge: 25,
     }),
     EffectsModule.forRoot([]),
-    EffectsModule.forFeature([
-      BuildingEffects,
-    ]),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

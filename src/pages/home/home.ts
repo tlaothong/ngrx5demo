@@ -11,14 +11,12 @@ import { getBuildingAll } from '../../states/building';
 })
 export class HomePage {
 
-  public buildings$ = this.store.pipe(select(getBuildingAll));
-
   constructor(public navCtrl: NavController, private store: Store<BuildingState>) {
 
   }
 
-  public loadData() {
-    this.store.dispatch(new LoadBuilding());
+  public goBuilding() {
+    this.navCtrl.push("BuildingPage");
   }
 
 }
