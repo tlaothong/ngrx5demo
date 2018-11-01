@@ -7,15 +7,20 @@ export enum BuildingTypes {
 }
 
 export class LoadBuilding implements Action {
-    readonly type: string = BuildingTypes.Load;
+    readonly type = BuildingTypes.Load;
 
     constructor() {
     }
 }
 
 export class LoadBuildingSuccess implements Action {
-    readonly type: string = BuildingTypes.LoadSuccess;
+    readonly type = BuildingTypes.LoadSuccess;
 
     constructor(public payload: Models.BuildingSample[]) {
     }
 }
+
+export type BuildingActionsType =
+    LoadBuilding
+    | LoadBuildingSuccess
+    ;
