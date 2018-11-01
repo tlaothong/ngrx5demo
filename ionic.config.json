@@ -1,0 +1,8 @@
+{
+  "name": "ngrx5demo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "479c50b9"
+}
