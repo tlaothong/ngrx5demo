@@ -16,9 +16,9 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item *ngFor="let it of buildings$ | async">
+    <button ion-item *ngFor="let it of buildings$ | async" (click)="goUnit(it.id)">
       {{it.id}} {{it.address}}
-    </ion-item>
+    </button>
   </ion-list>
 
 </ion-content>

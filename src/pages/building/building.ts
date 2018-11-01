@@ -22,4 +22,8 @@ export class BuildingPage {
     this.store.dispatch(new LoadBuilding());
   }
 
+  public goUnit(id: number) {
+    this.navCtrl.push("BuildingUnitPage");
+  }
+
 }
