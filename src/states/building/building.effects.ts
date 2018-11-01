@@ -21,18 +21,31 @@ export class BuildingEffects {
             address: "919",
             tambon: "Sila",
             district: "Muang Khon Kaen",
+            units: [
+                { id: "1", buildingId: "001", name: "One" },
+                { id: "2", buildingId: "001", name: "Two" },
+            ],
         },
         {
             id: "002",
             address: "919/1",
             tambon: "Sila",
             district: "Muang Khon Kaen",
+            units: [
+                { id: "3", buildingId: "002", name: "Three" },
+                { id: "4", buildingId: "002", name: "Four" },
+            ],
         },
         {
             id: "003",
             address: "919/2",
             tambon: "Sila",
             district: "Muang Khon Kaen",
+            units: [
+                { id: "5", buildingId: "003", name: "Five" },
+                { id: "6", buildingId: "003", name: "Six" },
+                { id: "7", buildingId: "003", name: "Seven" },
+            ],
         },
       ]))),
   );

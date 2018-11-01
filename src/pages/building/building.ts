@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Store, select } from '@ngrx/store';
 import { BuildingState } from '../../states/building/building.reducer';
 import { getBuildingAll } from '../../states/building';
-import { LoadBuilding } from '../../states/building/building.actions';
+import { LoadBuilding, SelectBuilding } from '../../states/building/building.actions';
 
 @IonicPage()
 @Component({
@@ -22,7 +22,8 @@ export class BuildingPage {
     this.store.dispatch(new LoadBuilding());
   }
 
-  public goUnit(id: number) {
+  public goUnit(id: string) {
+    this.store.dispatch(new SelectBuilding(id));
     this.navCtrl.push("BuildingUnitPage");
   }
 

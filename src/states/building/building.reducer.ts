@@ -1,12 +1,12 @@
 import { BuildingActionsType, BuildingTypes } from "./building.actions";
 
 export interface BuildingState {
-    currentId: number,
+    currentId: string,
     buildings: Models.BuildingSample[],
 }
 
 const initialState: BuildingState = {
-    currentId: 0,
+    currentId: null,
     buildings: [],
 };
 
@@ -16,6 +16,11 @@ export function reducer(state : BuildingState = initialState, action: BuildingAc
             return {
                 ...state,
                 buildings: action.payload,
+            }
+        case BuildingTypes.SelectBuilding:
+            return {
+                ...state,
+                currentId: action.payload,
             }
         default:
             return state;

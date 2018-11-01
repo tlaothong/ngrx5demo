@@ -5,6 +5,13 @@ namespace Models {
         address: string,
         tambon: string,
         district: string,
+        units: BuildingUnit[],
+    }
+
+    export interface BuildingUnit {
+        id: string,
+        buildingId: string,
+        name: string,
     }
 
 }

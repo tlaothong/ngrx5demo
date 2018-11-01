@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the BuildingUnitPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { BuildingState } from '../../states/building/building.reducer';
+import { Store } from '@ngrx/store';
+import { getCurrentUnits } from '../../states/building';
 
 @IonicPage()
 @Component({
@@ -15,7 +11,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BuildingUnitPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public units$ = this.store.select(getCurrentUnits);
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private store: Store<BuildingState>) {
   }
 
   ionViewDidLoad() {

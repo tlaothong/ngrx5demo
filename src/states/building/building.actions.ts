@@ -4,6 +4,7 @@ export enum BuildingTypes {
     Load = "[BLD] Load",
     LoadSuccess = "[BLD] Load Success",
     LoadFailed = "[BLD] Load Failed",
+    SelectBuilding = "[BLD] Select",
 }
 
 export class LoadBuilding implements Action {
@@ -20,7 +21,15 @@ export class LoadBuildingSuccess implements Action {
     }
 }
 
+export class SelectBuilding implements Action {
+    readonly type = BuildingTypes.SelectBuilding;
+
+    constructor(public payload: string) {
+    }
+}
+
 export type BuildingActionsType =
     LoadBuilding
     | LoadBuildingSuccess
+    | SelectBuilding
     ;
